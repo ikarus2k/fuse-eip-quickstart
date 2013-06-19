@@ -7,11 +7,13 @@ In this example, an orders file containing several orders for zoos around the wo
 
 We first want to make sure we retain a copy of the original file. This is done using the Wiretap EIP.
 
-After saving the original, we want want to split the file up into the individual orders. This is done using the Splitter EIP.
+After saving the original, we want want to split the file up into the individual orders. This is done using the Splitter
+EIP.
 
 Then we want to store the orders in separate directories by geographical region. This is done using a Recipient List EIP.
 
-Finally, we want to filter out the orders that container more than 100 animals and generate a message for the strategic account team. This is done using a Filter EIP.
+Finally, we want to filter out the orders that container more than 100 animals and generate a message for the strategic
+account team. This is done using a Filter EIP.
 
 ## What You Will Learn
 In studying this example you will learn:
@@ -35,7 +37,8 @@ Before building and running this example you need:
 
 ## Files in the Example
 * `pom.xml` - the Maven POM file for building the example
-* `src/main/java/org.jboss.fuse.examples/eip/RegionSupport.java` - a Java class used to determine the region code used by the recipient list
+* `src/main/java/org.jboss.fuse.examples/eip/RegionSupport.java` - a Java class used to determine the region code used
+  by the recipient list
 * `src/main/resources/OSGI-INF/blueprint/eip.xml` - the OSGI Blueprint file that defines the routes
 * `test/data/orders.xml` - the data file that can be used to test the route
 * `test/java/RegionSupportTest.java` - a JUnit test class for `RegionSupport`
@@ -50,15 +53,15 @@ To build the example:
 To run the example:
 
 1. Start JBoss Fuse 6 by running `bin/fuse` (on Linux) or `bin\fuse.bat` (on Windows).
-2. In the JBoss Fuse console, enter the following command:
-        osgi:install -s fab:mvn:org.jboss.fuse.examples/eip/6.0.0.redhat-024
-3. As soon as the Camel route has been started, you will see a directory `work/eip/input` in your JBoss Fuse installation.
-4. Copy the file you find in this example's `src/test/data` directory to the newly created `work/eip/input` directory.
-5. Wait a few moment and you will find multiple files organized by geographical region under `work/eip/output':
-** `2012_0003.xml` and `2012_0005.xml` in `work/eip/output/AMER`
-** `2012_0020.xml` in `work/eip/output/APAC`
-** `2012_0001.xml`, `2012_0002.xml` and `2012_0004.xml` in `work/eip/output/EMEA`
+2. In the JBoss Fuse console, enter the following command: `osgi:install -s mvn:org.jboss.fuse.examples/eip/1.0.0-SNAPSHOT`
+3. As soon as the Camel route has been started, you will see a directory `src/test/data` in your JBoss Fuse installation.
+4. Copy the file you find in this example's `src/test/data` directory to the newly created `src/test/data` directory.
+5. Wait a few moment and you will find multiple files organized by geographical region under `work/eip/output`:
+	* `2012_0003.xml` and `2012_0005.xml` in `work/eip/output/AMER`
+	* `2012_0020.xml` in `work/eip/output/APAC`
+	* `2012_0001.xml`, `2012_0002.xml` and `2012_0004.xml` in `work/eip/output/EMEA`
 6. Use `log:display` on the ESB shell to check out the business logging.
+
         [main]    Processing orders.xml
         [wiretap]  Archiving orders.xml
         [splitter] Shipping order 2012_0001 to region EMEA
@@ -67,7 +70,8 @@ To run the example:
         ...
 
 ## More information
-For more information see:
+For more information see:  
+
 * http://www.enterpriseintegrationpatterns.com/RecipientList.html
 * http://www.enterpriseintegrationpatterns.com/WireTap.html
 * http://www.enterpriseintegrationpatterns.com/Filter.html
