@@ -1,12 +1,12 @@
 title: JBoss Fuse Enterprise Integration Patterns
 github_repo_url: https://github.com/kpeeples/fuse-eip-quickstart
 technologies: 
-  Blueprint XML
-  Fuse Application Bundle (FAB)
-  Wiretap EIP
-  Splitter EIP
-  Recipient List EIP 
-  Filter EIP
+  - Blueprint XML
+  - Fuse Application Bundle (FAB)
+  - Wiretap EIP
+  - Splitter EIP
+  - Recipient List EIP 
+  - Filter EIP
 summary: This example demonstrates how to combine multiple EIPs to solve integration problems.
 level: Beginner
 product: fuse
