@@ -1,8 +1,8 @@
 #!/bin/sh 
 DEMO="JBoss Fuse EIP Demo"
-VERSION=6.0.0
-FUSE=jboss-fuse-6.0
-FUSE_BIN=jboss-fuse-full-6.0.0.redhat-024.zip
+VERSION=6.1.0
+FUSE=jboss-fuse-6.1
+FUSE_BIN=jboss-fuse-full-6.1.0.redhat-379.zip
 DEMO_HOME=./target
 FUSE_HOME=$DEMO_HOME/$FUSE
 SERVER_CONF=$FUSE_HOME/etc

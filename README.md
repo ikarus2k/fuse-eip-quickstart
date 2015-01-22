@@ -8,7 +8,7 @@ Step 2 - Run 'init.sh'
 From the command prompt run the init script, ./init.sh, from the command line
 View output for build success
 sample posted to init.sh.output under the support folder 
-View the eip-6.0.0.redhat-024.jar in the maven repository
+View the eip-6.1.0.redhat-379.jar in the maven repository
 
 Step 3 - Install and/or Setup JBDS for project import
 Download JBDS
@@ -30,12 +30,12 @@ JBossFuse:karaf@root>
 
 Step 6 - Import the existing maven project to review the files
 
-Step 7 - Install the Fuse Application Bundle (FAB) 
+Step 7 - Install the OSGi Bundle
 
-Run osgi:install -s fab:mvn:org.jboss.fuse.examples/eip/6.0.0.redhat-024
+Run osgi:install -s mvn:org.jboss.quickstarts.fuse/eip/${project.version}
 Response should be the Bundle ID
 
-Step 8 - View the OSGi list to make sure the FAB has been created and active
+Step 8 - View the OSGi list to make sure the bundle has been created and active
 Run osgi:list - l
 [ 234] [Active     ] [Created     ] [       ] [   60] fab:mvn:org.jboss.fuse.examples/eip/6.0.0.redhat-024
 
